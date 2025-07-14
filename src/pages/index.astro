@@ -6,6 +6,13 @@ import '../styles/global.css';
 
 const projects = await getCollection('projects');
 console.log(projects);
+
+const sortedProjects = projects.sort((a, b) => {
+  // Primero los destacados
+  if (a.data.featured && !b.data.featured) return -1;
+  if (!a.data.featured && b.data.featured) return 1;
+  return 0;
+});
 ---
 
 <Layout 
@@ -13,27 +20,29 @@ console.log(projects);
 >
 	<div class="text-center text-2xl font-bold mt-10 mb-10">Cristian Dev 💻</div>
 	<section aria-label="Proyectos destacados de Cristian Cantero López" class="p-4 my-10 mx-auto max-w-6xl">
-		<div class="grid grid-cols-2 md:grid-cols-1 gap-6">
-			<h1 class="text-2xl text-center font-bold mb-4">Proyectos destacados</h1>
+		<h1 class="text-3xl font-bold mb-6 text-center">Proyectos Destacados</h1>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			{
-				projects.map(project => {
-					const { title, description, image, technologies, url } = project.data;
+				sortedProjects.map(project => {
+					const { title, description, image, date, technologies, url } = project.data;
 					return (
-						<div class="bg-gray-800 p-4 rounded-lg shadow-md">
+						<div class="bg-gray-800 p-4 rounded-lg shadow-md flex flex-col h-full">
 							<h2 class="text-2xl font-bold">{title}</h2>
-							<p class="my-4 text-gray-400">{description}</p>
-							<img src={image} alt={title} class="w-full h-auto mt-4 rounded-md" />
-							<div class="my-6 mx-auto flex flex-wrap justify-center">
+							<div class="my-6">
 								{technologies.map(tech => (
-									<span class="inline-block text-white px-3 py-1">
-										<img src={tech.icon} alt={tech.name} class="inline-block w-14 h-14 mr-1" />
+									<span class="inline-block text-white px-3 py-1 border border-gray-600 rounded-full mr-2 mb-2">
+										<img src={tech.icon} alt={tech.name} class="inline-block w-6 h-6 mr-1" />
+										{tech.name}
 									</span>
 								))}
 							</div>
-							<div class="mt-4">
-								<a href={url.github} class="text-blue-500 hover:underline">Repositorio</a>
+							<img src={image} alt={title} class="w-full h-auto mt-4 rounded-md" />
+							<p class="mt-2 text-gray-400"><strong>Fecha de realización:</strong> {date}</p>
+							<p class="my-4 text-gray-400">{description}</p>
+							<div class="mt-auto flex justify-center">
+								<a href={url.github} class="text-gray-400 border rounded-full p-2 bg-gray-900 hover:bg-sky-600">Repositorio</a>
 								{url.demo && (
-									<a href={url.demo} class="text-blue-500 hover:underline ml-4">Demo</a>
+									<a href={url.demo} class="text-gray-400 border rounded-full p-2 bg-gray-900 hover:bg-sky-600 ml-4">Demo</a>
 								)}
 							</div>
 						</div>

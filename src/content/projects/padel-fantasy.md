@@ -1,12 +1,10 @@
 ---
 title: Padel Fantasy
+featured: true
 description: Aplicación Fantasy de pádel con compra y venta de jugadores, puntuación dinámica por jornada y un panel de administración para gestionar toda la plataforma.
 image: /padel-fantasy.jpg
+date: Mayo 2025
 technologies:
-  - name: HTML
-    icon: /icons/html5.svg
-  - name: CSS
-    icon: /icons/css.svg
   - name: JavaScript
     icon: /icons/javascript.svg
   - name: PHP
