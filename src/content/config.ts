@@ -13,6 +13,7 @@ const projects = defineCollection ({
                 icon: z.string().optional(),
                 iconLight: z.string().optional(),
                 iconDark: z.string().optional(),
+                color: z.string(),
             })
         ),
         url: z.object({
