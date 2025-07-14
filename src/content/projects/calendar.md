@@ -1,9 +1,10 @@
 ---
-title: ChronoPlan
+title: ChronoPlan – Tu rutina, bajo control
 featured: false
 description: Calendario web responsive para organización y gestión eficiente de eventos, tareas y recordatorios. Implementado con stack MERN, usa Redux Toolkit para manejo avanzado del estado y autenticación segura con JWT. Backend en Node.js con Express para API REST protegida y base de datos fiable.
 image: /calendar.png
 date: Febrero 2025
+status: Terminado
 technologies:
   - name: React
     icon: /icons/React_dark.svg

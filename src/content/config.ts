@@ -7,6 +7,7 @@ const projects = defineCollection ({
         description: z.string(),
         image: z.string(),
         date: z.string(),
+        status: z.enum(['Terminado', 'En desarrollo']),
         technologies: z.array(
             z.object({
                 name: z.string(),
