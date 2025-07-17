@@ -1,6 +1,45 @@
 ---
 ---
 
-<div class="text-center text-2xl font-bold mt-10 mb-10">
-    <p>Cristian Dev 💻</p>
+<div class="fixed top-0 left-0 right-0 z-50 bg-opacity-50 backdrop-blur-md shadow-md">
+    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto text-white font-bold">
+        <div>
+            <img src="/favicon.svg" alt="Logo Cristian Cantero López" class="h-10 w-10 bg-none bg-amber-50" />
+        </div>
+        <div class="relative">
+            {/* Botón hamburguesa visible solo en móviles */}
+            <button id="menu-btn" class="md:hidden p-2 text-white bg-gray-800 rounded-md focus:outline-none">
+                <!-- Icono hamburguesa simple -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            {/* Menú: oculto en móvil, visible en desktop */}
+            <ul id="menu" class="hidden md:flex space-x-4">
+                <li><a href="#hero" class="px-3 py-1 font-medium text-white hover:bg-amber-300 hover:text-black transition-all duration-300 rounded-md">Inicio</a></li>
+                <li><a href="#about" class="px-3 py-1 font-medium text-white hover:bg-amber-300 hover:text-black transition-all duration-300 rounded-md">Acerca de</a></li>
+                <li><a href="#projects" class="px-3 py-1 font-medium text-white hover:bg-amber-300 hover:text-black transition-all duration-300 rounded-md">Proyectos</a></li>
+                <li><a href="#contact" class="px-3 py-1 font-medium text-white hover:bg-amber-300 hover:text-black transition-all duration-300 rounded-md">Contacto</a></li>
+            </ul>
+
+            {/* Menú móvil: vertical, oculto por defecto */}
+            <ul id="menu-mobile" class="hidden flex-col space-y-4 bg-gray-900 p-4 rounded-md absolute top-full right-0">
+                <li><a href="#hero" class="block px-3 py-2 font-medium text-white hover:bg-amber-300 hover:text-black rounded-md">Inicio</a></li>
+                <li><a href="#about" class="block px-3 py-2 font-medium text-white hover:bg-amber-300 hover:text-black rounded-md">Acerca de</a></li>
+                <li><a href="#projects" class="block px-3 py-2 font-medium text-white hover:bg-amber-300 hover:text-black rounded-md">Proyectos</a></li>
+                <li><a href="#contact" class="block px-3 py-2 font-medium text-white hover:bg-amber-300 hover:text-black rounded-md">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- ¿Añadir botón para idioma y modo claro/oscuro? -->
 </div>
+
+<script is:inline>
+    const btn = document.getElementById('menu-btn');
+    const menuMobile = document.getElementById('menu-mobile');
+
+    btn.addEventListener('click', () => {
+        menuMobile.classList.toggle('hidden');
+    });
+</script>

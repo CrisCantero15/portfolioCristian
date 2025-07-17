@@ -1,10 +1,19 @@
 ---
+import TypingEffect from "../react/TypingEffect.jsx";
+
 ---
 
-<!-- Foto, descripción, skills, redes sociales y descargar CV + email -->
+<!-- Foto, descripción, skills, redes sociales y descargar CV -->
+<!-- Mostrar los iconos de las redes sociales principales (Linkedin, GitHub y Gmail -este que al hacer clic se abra el servidor de correo del usuario y tb un botón para copiar al portapapeles-) y un botón para abrir el CV en otra pestaña (Google Docs Viewer) -->
 
-<section aria-label="Presentación de Cristian Cantero López" class="p-4 mx-auto max-w-4xl h-screen">
+<section id="hero" aria-label="Presentación de Cristian Cantero López" class="p-4 mx-auto max-w-4xl h-screen flex flex-col items-center justify-center text-center">
 	<div class="text-center">
-		<p class="text-lg">Hola, soy Cristian Cantero López, un desarrollador web Full Stack especializado en JavaScript, React y Node.js.</p>
+		<div class="flex flex-col items-center mb-8">
+			<TypingEffect client:only /> <!--Componente de efecto de escritura -->
+		</div>
+		<p class="text-xl mb-4">Desarrollador web</p>
+		<a href="https://www.linkedin.com/in/cristian-cantero-lopez-1090121b4/" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" target="_blank" rel="noopener noreferrer">
+			LinkedIn
+		</a>
 	</div>
 </section>
