@@ -17,7 +17,7 @@ const { title, description } = Astro.props as LayoutProps;
 		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="overflow-x-hidden">
 		<slot />
 	</body>
 </html>
