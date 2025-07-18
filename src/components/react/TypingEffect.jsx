@@ -6,8 +6,7 @@ export default function TypingEffect() {
             textStyle={{ 
                 fontSize: '2rem',
                 color: 'white',
-                fontWeight: 'bold',
-                textAlign: 'center'
+                fontWeight: 'bold'
             }}
             startDelay={100}
             cursorColor="white"

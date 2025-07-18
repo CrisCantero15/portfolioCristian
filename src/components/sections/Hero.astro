@@ -1,19 +1,56 @@
 ---
 import TypingEffect from "../react/TypingEffect.jsx";
 
+// Tecnologías
+const technologies : Array<{ name: string; icon: string }> = [
+	{ name: "HTML", icon: "html5" },
+	{ name: "CSS", icon: "css" },
+	{ name: "JavaScript", icon: "javascript" },
+	{ name: "TypeScript", icon: "typescript" },
+	{ name: "React", icon: "React_dark" },
+	{ name: "Vue", icon: "vuejs" },
+	{ name: "Next.js", icon: "nextjs" },
+	{ name: "Astro", icon: "astro" },
+	{ name: "Tailwind CSS", icon: "tailwindcss" },
+	{ name: "Java", icon: "java" },
+	{ name: "PHP", icon: "Php_dark" },
+	{ name: "Node.js", icon: "nodejs" },
+	{ name: "Express", icon: "express" },
+	{ name: "SQL", icon: "mysql" },
+	{ name: "MongoDB", icon: "mongodb" },
+	{ name: "Git", icon: "git" },
+	{ name: "GitHub", icon: "github" },
+];
+
 ---
 
 <!-- Foto, descripción, skills, redes sociales y descargar CV -->
 <!-- Mostrar los iconos de las redes sociales principales (Linkedin, GitHub y Gmail -este que al hacer clic se abra el servidor de correo del usuario y tb un botón para copiar al portapapeles-) y un botón para abrir el CV en otra pestaña (Google Docs Viewer) -->
 
-<section id="hero" aria-label="Presentación de Cristian Cantero López" class="w-screen h-screen flex flex-col items-center justify-center text-center">
-	<div class="text-center">
-		<div class="flex flex-col items-center mb-8">
+<section id="hero" aria-label="Presentación de Cristian Cantero López" class="w-screen h-screen flex flex-col items-center justify-center gap-20">
+	<div class="max-w-4xl mx-auto flex justify-center gap-10 items-center flex-col-reverse md:flex-row">
+		<div class="flex flex-col gap-10 max-w-sm mx-auto">
 			<TypingEffect client:only /> <!--Componente de efecto de escritura -->
+			<p class="text-md font-medium text-gray-400">Desarrollador Full Stack enfocado en construir aplicaciones web funcionales, responsivas y centradas en la experiencia del usuario. Comprometido con la optimización del rendimiento, la accesibilidad y las buenas prácticas de desarrollo.</p>
+			<div class="flex gap-4">
+				<!-- Añadir redes sociales y botón para abrir CV en otra pestaña -->
+				<a href="/cv.pdf" target="_blank" class="bg-amber-300 text-gray-800 px-4 py-2 rounded hover:bg-amber-400 transition-colors">Descargar CV</a>
+				<a href="mailto:cristian.cantero@outlook.com" target="_blank" class="bg-blue-500 text-gray-800 px-4 py-2 rounded hover:bg-blue-600 transition-colors">Contacto</a>
+			</div>
 		</div>
-		<p class="text-xl mb-4">Desarrollador web</p>
-		<a href="https://www.linkedin.com/in/cristian-cantero-lopez-1090121b4/" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" target="_blank" rel="noopener noreferrer">
-			LinkedIn
-		</a>
+		<div>
+			<img src="/yo.jpg" alt="Foto de Cristian Cantero López" class="w-50 h-50 object-cover rounded-full mb-4 border-2 border-gray-300" />
+		</div>
+	</div>
+	<div class="max-w-4xl mx-auto flex flex-col justify-center items-center gap-5">
+		<ul class="grid grid-cols-6 gap-4">
+			<!-- Mostrar las tecnologías en un grid / Arreglar el tamaño de las imágenes -->
+			<!-- Hacer -->
+			{technologies.map((tech) => (
+				<li id={`tech-${tech.name}`} class="flex items-center justify-center p-4 bg-gray-800 rounded-lg shadow-lg shadow-slate-700">
+					<img src={`/icons/${tech.icon}.svg`} alt={`${tech.name} icon`} class="w-18 h-18 object-fit mr-2" />
+				</li>
+			))}
+		</ul>
 	</div>
 </section>
