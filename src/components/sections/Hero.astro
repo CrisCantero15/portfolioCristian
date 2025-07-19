@@ -7,7 +7,7 @@ const technologies : Array<{ name: string; icon: string }> = [
 	{ name: "CSS", icon: "css" },
 	{ name: "JavaScript", icon: "javascript" },
 	{ name: "TypeScript", icon: "typescript" },
-	{ name: "React", icon: "" },
+	{ name: "React", icon: "react" },
 	{ name: "Vue", icon: "vue" },
 	{ name: "Next.js", icon: "nextjs" },
 	{ name: "Astro", icon: "astro" },
@@ -24,29 +24,42 @@ const technologies : Array<{ name: string; icon: string }> = [
 
 ---
 
-<!-- Foto, descripción, skills, redes sociales y descargar CV -->
-<!-- Mostrar los iconos de las redes sociales principales (Linkedin, GitHub y Gmail -este que al hacer clic se abra el servidor de correo del usuario y tb un botón para copiar al portapapeles-) y un botón para abrir el CV en otra pestaña (Google Docs Viewer) -->
-
-<section id="hero" aria-label="Presentación de Cristian Cantero López" class="w-screen h-screen flex flex-col items-center justify-center gap-20">
+<section id="hero" aria-label="Presentación de Cristian Cantero López" class="w-screen my-30 flex flex-col items-center justify-center gap-20 md:min-h-screen md:my-0">
 	<div class="max-w-4xl mx-auto flex justify-center gap-10 items-center flex-col-reverse md:flex-row">
 		<div class="flex flex-col gap-10 max-w-sm mx-auto">
-			<TypingEffect client:only /> <!--Componente de efecto de escritura -->
+			<div>
+				<TypingEffect client:only /> <!--Componente de efecto de escritura -->
+				<a href="https://www.linkedin.com/in/cristian-cantero-l%C3%B3pez/" target="_blank" class="inline-block mt-2 text-xs font-bold text-white border rounded-full border-[#7bd47b] px-2 py-1 hover:scale-105 transition-transform duration-300" rel="noopener noreferrer">
+					Disponible para trabajar
+				</a>
+			</div>
 			<p class="text-md font-medium text-gray-400">Desarrollador Full Stack enfocado en construir aplicaciones web funcionales, responsivas y centradas en la experiencia del usuario. Comprometido con la optimización del rendimiento, la accesibilidad y las buenas prácticas de desarrollo.</p>
-			<div class="flex gap-4">
+			<div class="flex gap-2">
 				<!-- Añadir redes sociales y botón para abrir CV en otra pestaña -->
-				<a href="/cv.pdf" target="_blank" class="bg-amber-300 text-gray-800 px-4 py-2 rounded hover:bg-amber-400 transition-colors">Descargar CV</a>
-				<a href="mailto:cristian.cantero@outlook.com" target="_blank" class="bg-blue-500 text-gray-800 px-4 py-2 rounded hover:bg-blue-600 transition-colors">Contacto</a>
+				 <!-- Linkedin, GitHub y Gmail + Descargar CV -->
+				<a href="https://www.linkedin.com/in/cristian-cantero-l%C3%B3pez/" target="_blank" class="inline-flex items-center justify-center gap-2 text-white text-xs font-bold border border-gray-400 rounded-lg px-2 py-1 bg-gray-800 hover:bg-gray-900 ml-1" rel="noopener noreferrer">
+					<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256"><path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="#0A66C2"/></svg>
+					<span>LinkedIn</span>
+				</a>
+				<a href="https://github.com/cristian-cantero" target="_blank" class="inline-flex items-center justify-center gap-2 text-white text-xs font-bold border border-gray-400 rounded-lg px-2 py-1 bg-gray-800 hover:bg-gray-900 ml-1" rel="noopener noreferrer">
+					<svg width="24" height="24" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="#ffff"/></svg>
+					<span>GitHub</span>
+				</a>
+				<a href="/cv.pdf" target="_blank" class="inline-flex items-center justify-center gap-1 text-white text-xs font-bold border border-gray-400 rounded-lg px-2 py-1 bg-gray-800 hover:bg-gray-900 ml-1" rel="noopener noreferrer">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+					</svg>
+					<span>Descargar CV</span>
+					<!-- Añadir boxtext para ver el correo electrónico (si haces clic, se abre, si das al botón de la derecha, se copia al portapapeles) -->
+				</a>
 			</div>
 		</div>
-		<div class="flex flex-col-reverse gap-2 justify-center items-center md:flex-col md:gap-6">
-			<a href="https://www.linkedin.com/in/cristian-cantero-l%C3%B3pez/" target="_blank" class="inline-block text-xs font-bold text-white border rounded-full border-[#7bd47b] px-2 py-1 hover:scale-105 transition-transform duration-300" rel="noopener noreferrer">
-				Disponible para trabajar
-			</a>
-			<img src="/yo.jpg" alt="Foto de Cristian Cantero López" class="w-50 h-50 object-cover rounded-full mb-4" />
+		<div class="flex gap-2 justify-center items-center md:gap-6">
+			<img src="/yo.jpg" alt="Foto de Cristian Cantero López" class="w-60 h-60 object-cover rounded-full mb-4" />
 		</div>
 	</div>
 	<div class="max-w-4xl mx-auto flex flex-col justify-center items-center gap-5">
-		<ul class="grid grid-cols-6 gap-4">
+		<ul class="grid grid-cols-3 gap-4 md:grid-cols-6">
 			<!-- Mostrar las tecnologías en un grid / Arreglar el tamaño de las imágenes -->
 			<!-- Hacer -->
 			{technologies.map((tech) => (
