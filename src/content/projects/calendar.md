@@ -7,7 +7,7 @@ date: Febrero 2025
 status: Terminado
 technologies:
   - name: React
-    icon: /icons/React_dark.svg
+    icon: /icons/react.svg
     color: "#C4E8F2"
   - name: Node.js
     icon: /icons/nodejs.svg

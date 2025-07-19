@@ -10,7 +10,7 @@ export default function TypingEffect() {
             }}
             startDelay={100}
             cursorColor="white"
-            text="Cristian Cantero"
+            text="Cristian Cantero López"
             typeSpeed={100}
         />
     );

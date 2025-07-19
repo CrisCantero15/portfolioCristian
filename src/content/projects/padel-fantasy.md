@@ -10,7 +10,7 @@ technologies:
     icon: /icons/javascript.svg
     color: "#FBF78E"
   - name: PHP
-    icon: /icons/Php_dark.svg
+    icon: /icons/php.svg
     color: "#C3C6EE"
   - name: MySQL
     icon: /icons/mysql.svg
