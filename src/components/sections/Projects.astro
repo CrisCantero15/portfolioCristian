@@ -12,13 +12,13 @@ const sortedProjects = projects.sort((a, b) => {
 });
 ---
 
-<section id="projects" aria-label="Proyectos destacados de Cristian Cantero López" class="p-4 my-20 mx-auto max-w-5xl">
-	<div class="flex items-center justify-center mb-6 gap-2 text-amber-300">
+<section id="projects" aria-label="Proyectos destacados de Cristian Cantero López" class="p-4 my-20 mx-auto max-w-3xl lg:max-w-5xl">
+	<div class="flex items-center mb-6 gap-2 text-amber-300">
 		<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 				d="M3 7a2 2 0 012-2h5l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
 		</svg>
-		<h1 class="text-3xl font-bold">Proyectos</h1>
+		<h1 class="text-3xl font-bold">Proyectos destacados</h1>
 	</div>
 	<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
 		{
@@ -28,7 +28,7 @@ const sortedProjects = projects.sort((a, b) => {
 					<div class="p-4 rounded-lg shadow-lg shadow-slate-700 flex flex-col h-full">
 						<div class="flex items-center justify-between mb-2">
 							<h2 class="text-2xl font-bold">{title}</h2>
-							<p class={`text-gray-500 text-xs font-bold border border-gray-600 rounded-full px-2 py-0.5 ${status === 'Terminado' ? 'bg-[#7bd47b]' : 'bg-[#ecd36d]'}`}>{status}</p>
+							<p class={`text-gray-600 text-xs font-bold border border-gray-600 rounded-full px-2 py-0.5 ${status === 'Terminado' ? 'bg-[#7bd47b]' : 'bg-[#ecd36d]'}`}>{status}</p>
 						</div>
 						<div class="my-4 flex items-center mb-2">
 							{technologies.map(tech => (
@@ -44,10 +44,10 @@ const sortedProjects = projects.sort((a, b) => {
 						<div class="overflow-hidden rounded-md">
 							<img src={image} alt={title} class="w-full h-auto rounded-md hover:scale-105 transition-transform duration-300" />
 						</div>
-						<p class="mt-2 text-white text-sm font-bold">{date}</p>
-						<p class="my-4 text-gray-400 font-semibold">{description}</p>
+						<p class="mt-2 text-gray-200 text-sm font-bold">{date}</p>
+						<p class="my-4 text-gray-200 font-semibold">{description}</p>
 						<div class="mt-auto">
-							<a href={url.github} class="inline-flex items-center justify-center gap-1.5 text-white text-xs  font-bold border border-gray-400 rounded-lg px-2 py-1 bg-gray-800 hover:bg-gray-900" target="_blank">
+							<a href={url.github} class="inline-flex items-center justify-center gap-1.5 text-gray-200 text-xs  font-bold border border-gray-400 rounded-lg px-2 py-1 bg-gray-800 hover:bg-gray-900" target="_blank">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
 								</svg>
@@ -55,7 +55,7 @@ const sortedProjects = projects.sort((a, b) => {
 								Code
 							</a>
 							{url.demo && (
-								<a href={url.demo} class="inline-flex items-center justify-center gap-1 text-white text-xs font-bold border border-gray-400 rounded-lg px-2 py-1 bg-gray-800 hover:bg-gray-900 ml-1" target="_blank">
+								<a href={url.demo} class="inline-flex items-center justify-center gap-1 text-gray-200 text-xs font-bold border border-gray-400 rounded-lg px-2 py-1 bg-gray-800 hover:bg-gray-900 ml-1" target="_blank">
 									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
 									<path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
 									</svg>
