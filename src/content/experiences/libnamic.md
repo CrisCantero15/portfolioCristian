@@ -1,5 +1,5 @@
 ---
-title: Software Developer
+title: Desarrollador de Software
 company: Libnamic
 location: Cádiz, España (remoto)
 date:

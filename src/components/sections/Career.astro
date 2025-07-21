@@ -1,0 +1,75 @@
+---
+import TabsComponent from "../ui/TabsComponent";
+import { getCollection } from 'astro:content';
+
+const experiences = await getCollection('experiences');
+const studies = await getCollection('studies');
+// console.log(experiences);
+// console.log(studies);
+
+type Experience = {
+    data: {
+        date: {
+        start: string;
+        end?: string;
+        };
+        // otras propiedades si las hay
+    };
+};
+
+const parseSpanishDate = (dateStr: string): Date => {
+    const months: Record<string, number> = {
+        Enero: 0,
+        Febrero: 1,
+        Marzo: 2,
+        Abril: 3,
+        Mayo: 4,
+        Junio: 5,
+        Julio: 6,
+        Agosto: 7,
+        Septiembre: 8,
+        Octubre: 9,
+        Noviembre: 10,
+        Diciembre: 11,
+    };
+
+    const [monthName, year] = dateStr.split(' ');
+    const month = months[monthName];
+    const yearNum = parseInt(year, 10);
+
+    if (month === undefined || isNaN(yearNum)) {
+        throw new Error(`Fecha inválida: ${dateStr}`);
+    }
+
+    return new Date(yearNum, month);
+}
+
+const sortDates = (experiences: Experience[]): Experience[] => {
+    return experiences.sort((a, b) => {
+        const dateA = parseSpanishDate(a.data.date.start);
+        const dateB = parseSpanishDate(b.data.date.start);
+        return dateB.getTime() - dateA.getTime(); // Ascendente (más antiguo primero)
+    });
+}
+
+const sortedExperiences = sortDates(experiences);
+const sortedStudies = sortDates(studies);
+---
+
+<!-- Experiencia profesional y formación -->
+<!-- Menú de pestañas para presentar por un lado la experiencia y por otro la formación -->
+
+<section id="career" class="p-4 mx-auto max-w-3xl lg:max-w-5xl" aria-label="Información de Cristian">
+    <div class="flex flex-col gap-2">
+        <div class="flex gap-2 items-center text-white mb-10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+            </svg>
+            <h1 class="text-3xl font-bold">Trayectoria</h1>
+        </div>
+        <div>
+            {/* @ts-ignore */}
+            <TabsComponent client:load experiences={sortedExperiences} studies={sortedStudies} />
+        </div>
+    </div>
+</section>

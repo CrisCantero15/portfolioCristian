@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 
 import About from '../components/sections/About.astro';
-import Experience from '../components/sections/Experience.astro';
+import Career from '../components/sections/Career.astro';
 import Projects from '../components/sections/Projects.astro';
 import Contact from '../components/sections/Contact.astro';
 
@@ -18,11 +18,13 @@ import '../styles/global.css';
 	</header>
 	<main>
 		<About />
-		<Experience />
+		<Career />
+		<hr class="border-0.5 border-gray-300 mt-20 w-screen mx-auto" />
 		<Projects />
+		<hr class="border-0.5 border-gray-300 mt-20 w-screen mx-auto" />
 		<Contact />
 	</main>
 	<footer>
-		<p class="text-center text-gray-500 text-sm mt-8">© 2025 Cristian Cantero López. Todos los derechos reservados.</p>
+		<p class="text-center text-gray-300 font-semibold text-sm mt-8">© 2025 Cristian Cantero López. Todos los derechos reservados.</p>
 	</footer>
 </Layout>

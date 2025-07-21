@@ -1,10 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function TabsComponent({ experiences }) {
+export default function TabsComponent({ experiences, studies }) {
   
     const tabClass = "text-1xl sm:text-2xl font-bold cursor-pointer px-4 py-6 rounded-md transition-all duration-300 hover:border-amber-300 data-[state=active]:bg-amber-300 data-[state=active]:text-black";
-
-    console.log(experiences);
 
     return (
         <Tabs defaultValue="experience" className="w-full flex flex-col text-center gap-6">
@@ -22,13 +20,13 @@ export default function TabsComponent({ experiences }) {
             Formación
             </TabsTrigger>
         </TabsList>
-        <TabsContent value="experience" className="mt-10">
+        <TabsContent value="experience" className="mt-6">
             {experiences.map(experience => {
                 const { title, company, location, date, description, technologies, link } = experience.data;
                 return (
-                    <div className="flex flex-col gap-4 text-left border-l-2 border-l-gray-600 pl-10 relative md:flex-row md:gap-4">
+                    <div className="flex flex-col gap-4 pt-6 text-left border-l-2 border-l-gray-600 pl-10 relative md:flex-row md:gap-4">
                         <div className="flex flex-col gap-2 flex-none md:w-50 lg:w-64">
-                            <div className="p-2 bg-amber-300 rounded-full w-0.5 absolute -left-2.25 top-6"></div>
+                            <div className="p-2 bg-amber-300 rounded-full w-0.5 absolute -left-2.25 top-12"></div>
                             <h2 className="text-2xl font-bold text-amber-300">{title}</h2>
                             <a href={link ? link : "#"} target="_blank" rel="noopener noreferrer" className="text-lg text-white font-bold hover:underline">{company}</a>
                             <p className="text-sm font-semibold text-gray-200">{location}</p>
@@ -52,8 +50,24 @@ export default function TabsComponent({ experiences }) {
                 );
             })}
         </TabsContent>
-        <TabsContent value="formation" className="mt-4">
-            <p className="text-lg">Aquí iría tu formación académica.</p>
+        <TabsContent value="formation" className="mt-6">
+            {studies.map(study => {
+                const { title, school, location, date, description, link} = study.data;
+                return (
+                    <div className="flex flex-col gap-4 pt-6 text-left border-l-2 border-l-gray-600 pl-10 relative md:flex-row md:gap-10">
+                        <div className="flex flex-col gap-2 flex-none md:w-50 lg:w-64">
+                            <div className="p-2 bg-amber-300 rounded-full w-0.5 absolute -left-2.25 top-12"></div>
+                            <h2 className="text-2xl font-bold text-amber-300">{title}</h2>
+                            <a href={link ? link : "#"} target="_blank" rel="noopener noreferrer" className="text-lg text-white font-bold hover:underline">{school}</a>
+                            <p className="text-sm font-semibold text-gray-200">{location}</p>
+                            <p className="text-sm font-semibold text-gray-200">{date.start} - {date.end ? date.end : "Actualmente"}</p>
+                        </div>
+                        <div className="flex-grow">
+                            <p className="font-semibold text-gray-200 text-sm md:text-lg">{description}</p>
+                        </div>
+                    </div>                    
+                );
+            })}
         </TabsContent>
         </Tabs>
     );
