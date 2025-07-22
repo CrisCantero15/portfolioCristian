@@ -1,4 +1,5 @@
 ---
+import { ContactForm } from '@/components/ContactForm.jsx'
 ---
 
 <!-- Formulario de contacto (mirar solución de EmailJS para enviar emails) -->
@@ -11,6 +12,8 @@
             </svg>
             <h1 class="text-3xl font-bold">¿Hablamos?</h1>
         </div>
-        <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico a cristiancanterolopez@gmail.com </p>
+        <div>
+            <ContactForm client:load />
+        </div>
     </div>
 </section>

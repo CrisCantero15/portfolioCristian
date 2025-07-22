@@ -21,7 +21,7 @@ export default function TabsComponent({ experiences, studies }) {
             </TabsTrigger>
         </TabsList>
         <TabsContent value="experience" className="mt-6">
-            {experiences.map(experience => {
+            {experiences?.map(experience => {
                 const { title, company, location, date, description, technologies, link } = experience.data;
                 return (
                     <div className="flex flex-col gap-4 pt-6 text-left border-l-2 border-l-gray-600 pl-10 relative md:flex-row md:gap-4">
