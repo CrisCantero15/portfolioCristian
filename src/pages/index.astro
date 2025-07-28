@@ -7,6 +7,8 @@ import Career from '../components/sections/Career.astro';
 import Projects from '../components/sections/Projects.astro';
 import Contact from '../components/sections/Contact.astro';
 
+import ToastProvider from '../components/ui/ToastProvider.jsx';
+
 import '../styles/global.css';
 ---
 
@@ -23,6 +25,7 @@ import '../styles/global.css';
 		<Projects />
 		<hr class="border-0.5 border-gray-300 mt-20 w-screen mx-auto" />
 		<Contact />
+		<ToastProvider client:load />
 	</main>
 	<footer>
 		<p class="text-center text-gray-300 font-semibold text-sm mt-8">© 2025 Cristian Cantero López. Todos los derechos reservados.</p>

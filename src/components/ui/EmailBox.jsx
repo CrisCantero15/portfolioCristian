@@ -1,6 +1,4 @@
-// src/components/EmailActions.jsx
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 export default function EmailBox() {
   
@@ -13,7 +11,7 @@ export default function EmailBox() {
   };
 
   return (
-    <div class="inline-flex items-center justify-center gap-2 text-white text-xs font-bold border border-gray-400 rounded-lg px-4 py-1.5 bg-gray-800 hover:bg-gray-900 transition-colors duration-300">
+    <div class="inline-flex items-center justify-center gap-2 text-white text-xs font-bold border border-gray-400 rounded-lg px-5 py-1.5 bg-gray-800 hover:bg-gray-900 transition-colors duration-300">
       {/* Botón para copiar */}
       <button
         onClick={handleCopy}
@@ -32,17 +30,6 @@ export default function EmailBox() {
       >
         <span>{email}</span>
       </a>
-      {/* Toasts */}
-      <ToastContainer
-        position="bottom-right"
-        autoClose={2500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        draggable
-        theme="dark"
-      />
     </div>
   );
 }
