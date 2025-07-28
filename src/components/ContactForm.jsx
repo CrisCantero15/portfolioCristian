@@ -44,7 +44,7 @@ export const ContactForm = () => {
           <input type="text" name="name" placeholder="Nombre" className="border border-gray-400 rounded-md p-2" required />
           <input type="email" name="email" placeholder="Email" className="border border-gray-400 rounded-md p-2" required />
           <textarea name="message" placeholder="Escribe aquí tu mensaje..." className="border border-gray-400 rounded-md p-2" required />
-          <button type="submit" className="mx-auto bg-blue-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-blue-600 cursor-pointer">Enviar</button>
+          <button type="submit" className="mx-auto bg-amber-300 text-black font-semibold px-4 py-2 rounded-md hover:bg-amber-400 transition-colors duration-300 cursor-pointer">Enviar</button>
         </form>
         {/* <FormDialog client:load message={status} isModalOpen={isModalOpen} onOpenChange={handleModalStatus} /> */}
       </div>
