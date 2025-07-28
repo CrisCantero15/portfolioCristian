@@ -1,6 +1,7 @@
+
 import TypeWriterEffect from 'react-typewriter-effect';
 
-export default function TypingEffect() {
+export default function TypingEffect () {
     return (
         <TypeWriterEffect
             textStyle={{ 

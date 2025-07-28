@@ -15,7 +15,7 @@ technologies:
   - name: MySQL
     icon: /icons/mysql.svg
     color: "#9DBED7"
-url:
+url: 
     github: https://github.com/CrisCantero15/fantasy-padel
     demo: https://padelfantasyprueba.free.nf
 ---

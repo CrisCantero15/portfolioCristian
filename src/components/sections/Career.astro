@@ -1,9 +1,10 @@
 ---
-import TabsComponent from "../ui/TabsComponent";
+import TabsComponent from "../ui/TabsComponent.tsx";
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
 
-const experiences = await getCollection('experiences');
-const studies = await getCollection('studies');
+const experiences: CollectionEntry<'experiences'>[] = await getCollection('experiences');
+const studies: CollectionEntry<'studies'>[] = await getCollection('studies');
 
 type Experience = {
     data: {
@@ -55,9 +56,8 @@ console.log(sortedExperiences);
 ---
 
 <!-- Experiencia profesional y formación -->
-<!-- Menú de pestañas para presentar por un lado la experiencia y por otro la formación -->
 
-<section id="career" class="p-4 my-20 mx-auto max-w-3xl scroll-mt-20 lg:max-w-5xl" aria-label="Información de Cristian">
+<section id="career" class="p-4 my-20 mx-auto max-w-3xl scroll-mt-20 lg:max-w-5xl" aria-label="Información de Cristian" data-aos="fade-up">
     <div class="flex flex-col gap-2">
         <div class="flex gap-2 items-center text-white mb-10">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">

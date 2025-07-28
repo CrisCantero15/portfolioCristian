@@ -8,7 +8,7 @@ export default function ToastProvider () {
       autoClose={2500}
       hideProgressBar={false}
       newestOnTop={false}
-      closeOnClick
+      closeOnClick={true}
       rtl={false}
       draggable
       theme="dark"

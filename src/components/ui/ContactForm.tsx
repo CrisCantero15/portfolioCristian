@@ -4,23 +4,30 @@ import { toast } from 'react-toastify';
 
 export const ContactForm = () => {
     
-    const form = useRef();
-    const [isLoading, setIsLoading] = useState(false);
+    const form = useRef<HTMLFormElement>(null);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
+
+      if (!form.current) return;
 
       setIsLoading(true);
       // console.log(form.current);
       
       emailjs
-        .sendForm(import.meta.env.PUBLIC_EMAILJS_SERVICE_ID, import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID, form.current, {
-          publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY,
-        })
+        .sendForm(
+          import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+          import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+          form.current, 
+          {
+            publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY,
+          }
+        )
         .then(
           () => {
             toast.success(`Formulario enviado con éxito. Pronto recibirás una respuesta ✅`);
-            e.target.reset();
+            form.current?.reset();
             setIsLoading(false);
             console.log('Envío del formulario exitoso.');
           },

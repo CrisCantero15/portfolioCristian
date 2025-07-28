@@ -1,6 +1,45 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function TabsComponent({ experiences, studies }) {
+type DateRange = {
+  start: string;
+  end?: string | null;
+};
+
+type Technology = {
+  name: string;
+  icon?: string;
+  color: string;
+};
+
+type Experience = {
+  data: {
+    title: string;
+    company: string;
+    location: string;
+    date: DateRange;
+    description?: string;
+    technologies: Technology[];
+    link?: string;
+  };
+};
+
+type Study = {
+  data: {
+    title: string;
+    school: string;
+    location: string;
+    date: DateRange;
+    description?: string;
+    link?: string;
+  };
+};
+
+interface TabsComponentProps {
+  experiences: Experience[];
+  studies: Study[];
+}
+
+export default function TabsComponent({ experiences, studies }: TabsComponentProps) {
   
     const tabClass = "text-1xl sm:text-2xl font-bold cursor-pointer px-4 py-6 rounded-md transition-all duration-300 hover:border-amber-300 data-[state=active]:bg-amber-300 data-[state=active]:text-black";
 
@@ -21,10 +60,10 @@ export default function TabsComponent({ experiences, studies }) {
             </TabsTrigger>
         </TabsList>
         <TabsContent value="experience" className="mt-6">
-            {experiences?.map(experience => {
+            {experiences?.map((experience, index) => {
                 const { title, company, location, date, description, technologies, link } = experience.data;
                 return (
-                    <div className="flex flex-col gap-4 pt-6 text-left border-l-2 border-l-gray-600 pl-10 relative md:flex-row md:gap-4">
+                    <div key={index} className="flex flex-col gap-4 pt-6 text-left border-l-2 border-l-gray-600 pl-10 relative md:flex-row md:gap-4">
                         <div className="flex flex-col gap-2 flex-none md:w-50 lg:w-64">
                             <div className="p-2 bg-amber-300 rounded-full w-0.5 absolute -left-2.25 top-12"></div>
                             <h2 className="text-2xl font-bold text-amber-300">{title}</h2>
@@ -34,11 +73,11 @@ export default function TabsComponent({ experiences, studies }) {
                             <div className="flex items-center mt-2">
                                 {technologies.map(tech => (
 								<span 
-									class="flex items-center justify-center text-gray-600 text-xs px-2 py-1 border border-gray-600 rounded-full mr-2 mb-2"
+									className="flex items-center justify-center text-gray-600 text-xs px-2 py-1 border border-gray-600 rounded-full mr-2 mb-2"
 									style={{ backgroundColor: tech.color || '#1F2937' }}
 								>
-								<img src={tech.icon} alt={tech.name} class="inline-block w-4 h-4 mr-1" />
-								<span class="inline-block"><strong>{tech.name}</strong></span>
+								<img src={tech.icon} alt={tech.name} className="inline-block w-4 h-4 mr-1" />
+								<span className="inline-block"><strong>{tech.name}</strong></span>
 								</span>
 							))}
                             </div>
@@ -51,10 +90,10 @@ export default function TabsComponent({ experiences, studies }) {
             })}
         </TabsContent>
         <TabsContent value="formation" className="mt-6">
-            {studies.map(study => {
+            {studies.map((study, index) => {
                 const { title, school, location, date, description, link} = study.data;
                 return (
-                    <div className="flex flex-col gap-4 pt-6 text-left border-l-2 border-l-gray-600 pl-10 relative md:flex-row md:gap-10">
+                    <div key={index} className="flex flex-col gap-4 pt-6 text-left border-l-2 border-l-gray-600 pl-10 relative md:flex-row md:gap-10">
                         <div className="flex flex-col gap-2 flex-none md:w-50 lg:w-64">
                             <div className="p-2 bg-amber-300 rounded-full w-0.5 absolute -left-2.25 top-12"></div>
                             <h2 className="text-2xl font-bold text-amber-300">{title}</h2>

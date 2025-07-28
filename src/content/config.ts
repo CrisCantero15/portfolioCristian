@@ -12,13 +12,13 @@ const projects = defineCollection ({
             z.object({
                 name: z.string(),
                 icon: z.string().optional(),
-                iconLight: z.string().optional(),
-                iconDark: z.string().optional(),
                 color: z.string(),
             })
         ),
         url: z.object({
-            github: z.string().url(),
+            github: z.string().url().optional(),
+            githubbackend: z.string().url().optional(),
+            githubfrontend: z.string().url().optional(),
             demo: z.string().url().optional(),
         })
     })
@@ -38,8 +38,6 @@ const experiences = defineCollection({
             z.object({
                 name: z.string(),
                 icon: z.string().optional(),
-                iconLight: z.string().optional(),
-                iconDark: z.string().optional(),
                 color: z.string(),
             })
         ),  

@@ -1,15 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
+import Layout from '@/layouts/Layout.astro';
+import Navbar from '@/components/Navbar.astro';
 
-import About from '../components/sections/About.astro';
-import Career from '../components/sections/Career.astro';
-import Projects from '../components/sections/Projects.astro';
-import Contact from '../components/sections/Contact.astro';
+import About from '@/components/sections/About.astro';
+import Career from '@/components/sections/Career.astro';
+import Projects from '@/components/sections/Projects.astro';
+import Contact from '@/components/sections/Contact.astro';
 
-import ToastProvider from '../components/ui/ToastProvider.jsx';
+import ToastProvider from '@/components/ui/ToastProvider.tsx';
+import AosInit from '@/components/ui/AosInit.tsx';
 
-import '../styles/global.css';
+import '@/styles/global.css';
 ---
 
 <Layout 
@@ -19,6 +20,7 @@ import '../styles/global.css';
 		<Navbar />
 	</header>
 	<main>
+		<AosInit client:load />
 		<About />
 		<Career />
 		<hr class="border-0.5 border-gray-300 mt-20 w-screen mx-auto" />

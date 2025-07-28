@@ -19,5 +19,6 @@ technologies:
     icon: /icons/mongodb.svg
     color: "#ACECAD"
 url:
-    github: https://github.com/CrisCantero15/calendar-app
+    githubbackend: https://github.com/CrisCantero15/REACT-MERN-backend
+    githubfrontend: https://github.com/CrisCantero15/calendar-app
 ---
