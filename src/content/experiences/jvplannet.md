@@ -13,5 +13,8 @@ technologies:
   - name: PHP
     icon: /icons/php.svg
     color: "#C3C6EE"
+  - name: Node.js
+    icon: /icons/nodejs.svg
+    color: "#96DF96"
 link: https://jvplannet.net/
 ---
