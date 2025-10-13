@@ -70,7 +70,7 @@ export default function TabsComponent({ experiences, studies }: TabsComponentPro
                             <a href={link ? link : "#"} target="_blank" rel="noopener noreferrer" className="text-lg text-white font-bold hover:underline">{company}</a>
                             <p className="text-sm font-semibold text-gray-200">{location}</p>
                             <p className="text-sm font-semibold text-gray-200">{date.start} - {date.end ? date.end : "Actualmente"}</p>
-                            <div className="flex items-center mt-2">
+                            <div className="flex flex-wrap items-center mt-2">
                                 {technologies.map(tech => (
 								<span 
 									className="flex items-center justify-center text-gray-600 text-xs px-2 py-1 border border-gray-600 rounded-full mr-2 mb-2"
