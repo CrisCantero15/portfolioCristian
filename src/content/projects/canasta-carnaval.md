@@ -17,7 +17,7 @@ technologies:
     color: "#FBF78E"
   - name: GSAP
     icon: /icons/gsap.svg
-    color: "#02D92D"
+    color: "#60DB7D"
 url:
     demo: https://www.williams-humbert.com/canasta-carnaval/
 ---
