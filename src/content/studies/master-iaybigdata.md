@@ -4,6 +4,6 @@ school: IFP
 location: Barcelona, España (remoto)
 date:
     start: Septiembre 2025
-description: Programar y aplicar sistemas inteligentes que optimizan la gestión de la información y la explotación de datos masivos, garantizando el acceso a los datos de forma segura y cumpliendo los criterios de accesibilidad,usabilidad y calidad exigidas en los estándares establecidos, así como los principios éticos y legales.
+description: Programación y aplicación de sistemas inteligentes para la gestión y explotación de datos masivos utilizando tecnologías como Python, TensorFlow, Keras, Scikit-Learn, Pandas y bases de datos NoSQL/SQL. Desarrollo de modelos de aprendizaje automático y deep learning para la clasificación, predicción y análisis de datos. Implementación de pipelines de datos eficientes, asegurando acceso seguro, calidad, usabilidad y cumplimiento de estándares de datos, así como principios éticos y legales en el tratamiento de la información.
 link: https://www.ifp.es/
 ---

@@ -8,10 +8,10 @@ status: Terminado
 technologies:
   - name: HTML5
     icon: /icons/html5.svg
-    color: "#F59E0B"
+    color: "#FFD6A5"
   - name: CSS
     icon: /icons/css.svg
-    color: "#3B82F6"
+    color: "#A5B4FC"
   - name: JavaScript
     icon: /icons/javascript.svg
     color: "#FBF78E"
