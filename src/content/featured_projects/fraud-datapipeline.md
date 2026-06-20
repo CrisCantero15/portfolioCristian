@@ -1,7 +1,7 @@
 ---
 title: Fraud Detection Pipeline – Data Lake + Spark
 description: Pipeline de Big Data para detección de transacciones fraudulentas en un caso práctico de eCommerce. Integra múltiples fuentes heterogéneas (CSV, JSON, logs), construye un Data Lake en formato Parquet y procesa grandes volúmenes de datos con Apache Spark para detectar patrones de comportamiento fraudulento.
-image: /fraud-detection-pipeline.jpg
+image: /fraud-detection-pipeline.webp
 date: Mayo 2026
 status: Terminado
 technologies:
@@ -13,7 +13,7 @@ technologies:
     color: "#FFE08C"
   - name: Spark
     icon: /icons/pyspark.svg
-    color: "#A8E6CF"
+    color: "#FFD3A5"
   - name: Jupyter
     icon: /icons/jupyter.svg
     color: "#F4A261"

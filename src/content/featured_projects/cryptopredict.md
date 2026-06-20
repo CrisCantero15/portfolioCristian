@@ -11,7 +11,7 @@ technologies:
   - name: XGBoost
     icon: /icons/xgboost.svg
     color: "#FFB6B6"
-  - name: PySpark
+  - name: Spark
     icon: /icons/pyspark.svg
     color: "#FFD3A5"
   - name: Pandas

@@ -1,7 +1,7 @@
 ---
 title: BoneVision AI – Clasificación de radiografías con CNN
 description: Modelo de IA basado en CNN para la clasificación automática de radiografías óseas en fractura o no fractura. Incluye preprocesado de imágenes, data augmentation, regularización y callbacks como EarlyStopping y ReduceLROnPlateau, evaluando la generalización con imágenes externas no vistas.
-image: /cnn.png
+image: /cnn.webp
 date: Diciembre 2025
 status: Terminado
 technologies:
