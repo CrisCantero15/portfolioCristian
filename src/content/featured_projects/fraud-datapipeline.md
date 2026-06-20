@@ -12,7 +12,7 @@ technologies:
     icon: /icons/pandas.svg
     color: "#FFE08C"
   - name: Spark
-    icon: /icons/spark.svg
+    icon: /icons/pyspark.svg
     color: "#A8E6CF"
   - name: Jupyter
     icon: /icons/jupyter.svg
