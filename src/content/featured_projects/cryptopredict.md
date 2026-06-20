@@ -1,7 +1,7 @@
 ---
 title: CryptoPredict – Sistema Inteligente de Predicción de Criptomonedas
 description: Sistema end-to-end de análisis y predicción de criptomonedas (TFM del Máster en IA y Big Data). Integra ingesta de datos en tiempo real, pipelines automatizados con PySpark, modelos de Machine Learning con XGBoost y reentrenamiento periódico, API REST con FastAPI y un dashboard analítico conectado a una interfaz web.
-image: /crypto-predict.jpg
+image: /crypto-predict.png
 date: Junio 2026
 status: Terminado
 technologies:
