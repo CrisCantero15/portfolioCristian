@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import ProjectCard from '../ui/ProjectCard.astro'; // ajusta la ruta si está en otra carpeta
 
-const featuredProjects = (await getCollection('featured-projects')).slice(0, 2);
+const featuredProjects = (await getCollection('featured_projects')).slice(0, 2);
 const otherProjects = await getCollection('projects');
 ---
 
