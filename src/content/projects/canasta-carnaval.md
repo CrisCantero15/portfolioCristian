@@ -1,6 +1,5 @@
 ---
 title: Canasta Carnaval – Interfaz web interactiva
-featured: false
 description: Aplicación web profesional con interfaz innovadora basada en un mockup 3D de un iPhone. Incluye animaciones avanzadas con GSAP como Flip, SplitText y scroll sections para cambiar pestañas, además de una ruleta interactiva dentro del móvil que dirige a otra página, mostrando experiencia en frontend creativo y diseño de interacción.
 image: /canasta-carnaval.png
 date: Enero 2026

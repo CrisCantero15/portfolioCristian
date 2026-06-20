@@ -1,0 +1,18 @@
+---
+interface Props {
+  technologies: { name: string; icon?: string; color: string }[];
+}
+const { technologies } = Astro.props;
+---
+
+<div class="flex items-center flex-wrap mb-2">
+	{technologies.map(tech => (
+		<span
+			class="flex items-center justify-center text-gray-600 text-xs px-2 py-1 border border-gray-600 rounded-full mr-2 mb-2"
+			style={`background-color: ${tech.color || '#1F2937'};`}
+		>
+		<img src={tech.icon} alt={tech.name} class="inline-block w-4 h-4 mr-1" />
+		<span class="inline-block"><strong>{tech.name}</strong></span>
+		</span>
+	))}
+</div>
