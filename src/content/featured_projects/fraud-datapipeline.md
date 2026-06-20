@@ -18,5 +18,5 @@ technologies:
     icon: /icons/jupyter.svg
     color: "#F4A261"
 url:
-    github: https://github.com/TU-USUARIO/fraud-detection-pipeline
+    github: https://github.com/CrisCantero15/fraud-detection-pipeline
 ---
