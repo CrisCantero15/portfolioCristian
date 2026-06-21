@@ -9,7 +9,7 @@ technologies:
     icon: /icons/html5.svg
     color: "#FFD6A5"
   - name: CSS
-    icon: /icons/css3.svg
+    icon: /icons/css.svg
     color: "#A5B4FC"
   - name: JavaScript
     icon: /icons/javascript.svg

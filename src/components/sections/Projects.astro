@@ -27,10 +27,12 @@ const otherProjects = sortByDateDesc(await getCollection('projects'));
 		<h2 class="text-2xl font-bold">Otros proyectos</h2>
 	</div>
 
-	<!-- Resto de proyectos -->
-	<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+	<!-- Resto de proyectos: flex en vez de grid, para poder centrar el último si queda suelto -->
+	<div class="flex flex-wrap justify-center gap-6">
 		{otherProjects.map((project) => (
-			<ProjectCard {...project.data} />
+			<div class="w-full lg:w-[calc(50%-0.75rem)]">
+				<ProjectCard {...project.data} />
+			</div>
 		))}
 	</div>
 </section>
