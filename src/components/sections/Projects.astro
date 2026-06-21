@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import ProjectCard from '../ui/ProjectCard.astro';
 import { sortByDateDesc } from '../../lib/sortProjects';
 
-const featuredProjects = sortByDateDesc(await getCollection('featured-projects')).slice(0, 2);
+const featuredProjects = sortByDateDesc(await getCollection('featured_projects')).slice(0, 2);
 const otherProjects = sortByDateDesc(await getCollection('projects'));
 ---
 
