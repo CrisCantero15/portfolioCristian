@@ -1,5 +1,5 @@
 ---
-title: Master Cocktail 2026
+title: Master Cocktail 2026 - Landing para concurso de coctelería
 description: Landing oficial de la 7ª edición del concurso de coctelería Master Cocktail. Diseño altamente interactivo con animaciones y transiciones controladas por scroll mediante GSAP (ScrollTrigger y variantes), formulario de inscripción multipaso con validaciones y lógica de envío en PHP.
 image: /master-cocktail.webp
 date: Marzo 2026
