@@ -1,9 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import ProjectCard from '../ui/ProjectCard.astro'; // ajusta la ruta si está en otra carpeta
+import ProjectCard from '../ui/ProjectCard.astro';
+import { sortByDateDesc } from '../../lib/sortProjects';
 
-const featuredProjects = (await getCollection('featured_projects')).slice(0, 2);
-const otherProjects = await getCollection('projects');
+const featuredProjects = sortByDateDesc(await getCollection('featured-projects')).slice(0, 2);
+const otherProjects = sortByDateDesc(await getCollection('projects'));
 ---
 
 <section id="projects" aria-label="Proyectos destacados de Cristian Cantero López" class="p-4 my-20 mx-auto max-w-3xl scroll-mt-20 lg:max-w-5xl" data-aos="fade-up">
