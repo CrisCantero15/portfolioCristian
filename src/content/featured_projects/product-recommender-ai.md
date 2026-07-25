@@ -1,5 +1,5 @@
 ---
-title: Sistema Inteligente de Recomendación de Productos
+title: AI Product Recommendation Engine – Sistema Inteligente de Recomendación de Productos
 description: 🚧 MVP funcional disponible. Sistema de búsqueda y recomendación para e-commerce basado en Inteligencia Artificial que combina comprensión del lenguaje natural mediante LLM, extracción automática de filtros, búsqueda semántica con embeddings y ChromaDB, y re-ranking mediante reglas de negocio para ofrecer recomendaciones precisas y conversacionales.
 image: /product-recommender-ai.webp
 date: Julio 2026
