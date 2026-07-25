@@ -5,7 +5,7 @@ const projectSchema = z.object({
     description: z.string(),
     image: z.string(),
     date: z.string(),
-    status: z.enum(['Terminado', 'En desarrollo']),
+    status: z.enum(['Terminado', 'En desarrollo', 'En desarrollo (MVP funcional)']),
     technologies: z.array(
         z.object({
             name: z.string(),
