@@ -1,7 +1,7 @@
 ---
 title: Gemini Chatbot – Chatbot web con IA
 description: Chatbot web con frontend estático y backend en Flask conectado a la API de Google Gemini. Permite conversaciones en tiempo real mediante un endpoint seguro, gestionando las peticiones desde el backend y manteniendo las credenciales protegidas, demostrando la integración práctica de IA generativa en aplicaciones web.
-image: /chatbot-ia.png
+image: /chatbot-ia.webp
 date: Noviembre 2025
 status: Terminado
 technologies:

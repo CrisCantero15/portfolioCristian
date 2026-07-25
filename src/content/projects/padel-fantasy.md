@@ -1,7 +1,7 @@
 ---
 title: Padel Fantasy – Vive el pádel como un manager
 description: Aplicación Fantasy de pádel con compra y venta de jugadores, puntuación dinámica por jornada y panel de administración completo. Construida con arquitectura MVC para separación clara de responsabilidades, ofrece gestión eficiente de usuarios y datos en tiempo real.
-image: /padel-fantasy.jpg
+image: /padel-fantasy.webp
 date: Mayo 2025
 status: Terminado
 technologies:
