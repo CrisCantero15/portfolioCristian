@@ -1,9 +1,9 @@
 ---
-title: Marketplace Product Scraper – Sistema Inteligente de Web Scraping para Marketplaces
+title: MarketScraper – Web Scraping para Marketplaces
 description: 🚧 MVP funcional disponible. Aplicación Full Stack desarrollada con Node.js para la extracción automatizada de productos mediante técnicas de web scraping. Implementa gestión inteligente de proxies públicos, validación automática, rotación de proxies y scraping concurrente para obtener, procesar y visualizar información de productos mediante una API REST y una interfaz web.
 image: /marketplace-product-scraper.webp
 date: Julio 2026
-status: En desarrollo
+status: Desarrollo
 technologies:
   - name: HTML5
     icon: /icons/html5.svg
