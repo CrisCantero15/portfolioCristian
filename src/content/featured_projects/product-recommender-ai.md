@@ -1,9 +1,9 @@
 ---
 title: Sistema Inteligente de Recomendación de Productos
-description: Sistema de búsqueda y recomendación para e-commerce basado en Inteligencia Artificial que combina comprensión del lenguaje natural mediante LLM, extracción automática de filtros, búsqueda semántica con embeddings y ChromaDB, y re-ranking mediante reglas de negocio para ofrecer recomendaciones precisas y conversacionales.
+description: 🚧 MVP funcional disponible. Sistema de búsqueda y recomendación para e-commerce basado en Inteligencia Artificial que combina comprensión del lenguaje natural mediante LLM, extracción automática de filtros, búsqueda semántica con embeddings y ChromaDB, y re-ranking mediante reglas de negocio para ofrecer recomendaciones precisas y conversacionales.
 image: /product-recommender-ai.webp
 date: Julio 2026
-status: En desarrollo (MVP funcional)
+status: En desarrollo
 technologies:
   - name: Node.js
     icon: /icons/nodejs.svg
