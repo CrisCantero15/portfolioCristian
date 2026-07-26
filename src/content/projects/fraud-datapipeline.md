@@ -1,5 +1,5 @@
 ---
-title: Detección de Fraude – Data Lake + Spark
+title: FraudSense – Detección de Fraude
 description: Pipeline de Big Data para detección de transacciones fraudulentas en un caso práctico de eCommerce. Integra múltiples fuentes heterogéneas (CSV, JSON, logs), construye un Data Lake en formato Parquet y procesa grandes volúmenes de datos con Apache Spark para detectar patrones de comportamiento fraudulento.
 image: /fraud-detection-pipeline.webp
 date: Mayo 2026
