@@ -10,7 +10,7 @@ technologies:
     color: "#B7E4C7"
   - name: Express
     icon: /icons/express.svg
-    color: "#E5E5E5"
+    color: "#c5c5c5"
   - name: ChromaDB
     icon: /icons/chromadb.svg
     color: "#D8B4FE"
